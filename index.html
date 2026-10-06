@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tinajas - Cuéntanos tu experiencia</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <!-- PORTADA -->
+        <section id="inicio" class="pantalla activa">
+
+            <div class="overlay"></div>
+
+            <div class="contenido">
+
+                <div class="logo">
+                     <img src="logo.png" alt="Logo Tinajas">
+                </div>
+
+                <div class="pregunta">
+                    ¿Qué tal estuvo todo?
+                </div>
+
+                <!-- BOTÓN VERDE -->
+                <button id="btnBueno" class="boton-imagen-resena">
+
+                    <img
+                            src="boton-resena.png"
+                            alt="Dejar una opinion">
+
+                </button>
+
+
+                <!-- BOTÓN ROJO -->
+               <button id="btnProblema" class="boton-imagen-problema">
+                        <img
+                            src="boton-problema.png"
+                            alt="Tuve un problema - Contarlo en privado">
+                    
+                </button>
+
+                <p class="privacidad">
+                    Tu opinión nos ayuda a mejorar tu próxima visita.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- FORMULARIO -->
+        <section id="formulario" class="pantalla">
+
+            <div class="overlay"></div>
+
+            <div class="contenido formulario-contenedor">
+
+                <button id="volver" class="volver">
+                    ← Volver
+                </button>
+
+              
+
+                <h2>Cuéntanos qué pasó</h2>
+
+                <p class="descripcion">
+                    Lamentamos que tu experiencia no haya sido la esperada.
+                    Déjanos los detalles para poder mejorar.
+                </p>
+
+                <form id="formIncidente">
+
+                    <div class="campo">
+                        <label for="nombre">Nombre (opcional)</label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Tu nombre"
+                        >
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="sede">Sede</label>
+
+                        <select id="sede" name="sede" required>
+
+                            <option value="" selected disabled>
+                                Selecciona la sede
+                            </option>
+
+                            <option value="Javier Prado">
+                                Tinajas Javier Prado
+                            </option>
+
+                            <option value="Barranco">
+                                Tinajas Barranco
+                            </option>
+
+                            <option value="Centro de Lima">
+                                Tinajas Centro de Lima
+                            </option>
+
+                            <option value="Primavera">
+                                Tinajas Primavera
+                            </option>
+
+                            <option value="La Molina">
+                                Tinajas La Molina
+                            </option>
+
+                            <option value="Jesus Maria">
+                                Tinajas Jesús María
+                            </option>
+
+                            <option value="San Borja">
+                                Tinajas San Borja
+                            </option>
+
+                            <option value="Chorrillos">
+                                Tinajas Chorrillos
+                            </option>
+
+                            <option value="Chaclacayo">
+                                Tinajas Chaclacayo
+                            </option>
+
+                            <option value="Chosica">
+                                Tinajas Chosica
+                            </option>
+
+                        </select>
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="tipo">
+                            ¿Qué ocurrió?
+                        </label>
+
+                        <select id="tipo" required>
+
+                            <option value="">
+                                Selecciona una opción
+                            </option>
+
+                            <option value="Atención">
+                                Atención
+                            </option>
+
+                            <option value="Comida">
+                                Comida
+                            </option>
+
+                            <option value="Demora">
+                                Demora
+                            </option>
+
+                            <option value="Pedido incorrecto">
+                                Pedido incorrecto
+                            </option>
+
+                            <option value="Limpieza">
+                                Limpieza
+                            </option>
+
+                            <option value="Otro">
+                                Otro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="mensaje">
+                            Cuéntanos qué pasó
+                        </label>
+
+                        <textarea
+                            id="mensaje"
+                            maxlength="800"
+                            placeholder="Describe brevemente lo ocurrido..."
+                            required
+                        ></textarea>
+
+                        <div class="contador">
+                            <span id="contador">0</span>/800
+                        </div>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="contacto">
+                            Teléfono o correo (opcional)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contacto"
+                            placeholder="Si deseas que nos comuniquemos contigo"
+                        >
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="enviar"
+                    >
+                        Enviar comentario
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- MENSAJE ENVIADO -->
+        <section id="gracias" class="pantalla">
+
+            <div class="overlay"></div>
+
+            <div class="contenido gracias-contenido">
+
+                <div class="check">
+                    ✓
+                </div>
+
+                <h2>
+                    Gracias por contarnos
+                </h2>
+
+                <p>
+                    Tu comentario fue recibido correctamente.
+                    Revisaremos lo ocurrido para seguir mejorando
+                    nuestra atención.
+                </p>
+
+                <button id="volverInicio">
+                    Volver al inicio
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
